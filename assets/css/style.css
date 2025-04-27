@@ -227,8 +227,10 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
+  padding-left: 330px;
+  padding-right: 330px;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/포폴배경.jpg") top center;
   background-size: cover;
 }
 
