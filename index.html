@@ -621,7 +621,7 @@
             </div>
             <div class="form-group">
               <label for="name">Message</label>
-              <textarea class="form-control" name="message" rows="10" required></textarea>
+              <textarea class="form-control" name="content" rows="10" required></textarea>
             </div>
             <div class="my-3">
               <div class="loading">Loading</div>
@@ -680,7 +680,7 @@
     params.append('name', formData.get('name'));
     params.append('email', formData.get('email'));
     params.append('subject', formData.get('subject'));
-    params.append('message', formData.get('message'));
+    params.append('content', formData.get('content'));
 
     try {
       const response = await fetch('https://daeho-dev.com/api/email/save', {
