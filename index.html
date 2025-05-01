@@ -676,20 +676,19 @@
 
     const formData = new FormData(this);
 
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      subject: formData.get('subject'),
-      message: formData.get('message')
-    };
+    const params = new URLSearchParams();
+    params.append('name', formData.get('name'));
+    params.append('email', formData.get('email'));
+    params.append('subject', formData.get('subject'));
+    params.append('message', formData.get('message'));
 
     try {
       const response = await fetch('https://daeho-dev.com/api/email/save', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: JSON.stringify(data)
+        body: params.toString()
       });
 
       if (response.ok) {
